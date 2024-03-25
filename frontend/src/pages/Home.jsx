@@ -22,6 +22,7 @@ const Home = () => {
             setLoading(false)
         })
     },[]);
+    console.log(books);
   return (
 
     <div className='p-4'>
@@ -34,8 +35,7 @@ const Home = () => {
         {
             loading ? <Spinner />
             :(
-                books ? <h2>Enter some books</h2>:
-                (
+                
 
                 <table className='w-full border-separate border-spacing-2'>
                     <thead>
@@ -74,7 +74,7 @@ const Home = () => {
                     </tbody>
                 </table>
                 )
-            )
+            
         }
     </div>
   )
